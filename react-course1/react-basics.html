@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!-- Babel: compilador de JSX a JS-->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const name = 'Lara';
+      const importeTotalCompra = 0;
+
+      function CalculatePrice(element){
+
+        console.log(this);
+      }
+
+      const div = (
+        <div>
+          <div>
+            <button>Good job!</button>
+            <p>Mi nombre es {name}</p>
+          </div>
+          <div>
+            <p>Cotton socks</p>
+            <p>Price: $10</p>
+            <button id="idButton-Socks" onclick="CalculatePrice(this)">Add to Cart</button>
+            <p>T-shirt</p>
+            <p>Price: $8</p>
+            <button id="idButton-Shirt" onclick="CalculatePrice(this)">Add to Cart</button>
+          </div>
+        </div>
+      );
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
