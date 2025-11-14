@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function CountButton({ count, setCount }) {
+        // Para que cada botón tenga un contador independiente
+        //const [count, setCount] = React.useState(0)
+
+        function showClick() {
+          setCount(count + 1);
+          //console.log('Clicked')
+        }
+
+        return (
+          <>
+            <button onClick={showClick}>
+              Clicked {count} {count === 1 ? "time" : "times"}
+            </button>
+          </>
+        );
+      }
+
+      function ResetButton({setCount}) {
+        function resetClick() {
+          setCount(0);
+        }
+
+        return (
+          <>
+            <button onClick={resetClick}>Reset</button>
+          </>
+        );
+      }
+
+      function App() {
+        // Para que ambos botones tengan el mismo contador
+        const [count, setCount] = React.useState(0);
+
+        return (
+          <>
+            <CountButton count={count} setCount={setCount} />
+            <CountButton count={count} setCount={setCount} />
+            <ResetButton setCount={setCount} />
+          </>
+        );
+      }
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
