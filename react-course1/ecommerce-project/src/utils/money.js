@@ -1,3 +1,8 @@
 export function formatMoney(amountCents){
-    return `$${(amountCents/100).toFixed(2)}`;
+    const result = (amountCents/100)
+    if(result <0 ){
+        return `-$${(Math.abs(result)).toFixed(2)}`;
+    }
+
+    return `$${result.toFixed(2)}`;
 }

@@ -13,5 +13,9 @@ export default defineConfig({
         target: 'http://localhost:3000'
       }
     }
+  },
+  // To create de js project directly in the backend dir
+  build:{
+    outDir: '../ecommerce-backend/dist'
   }
 })
