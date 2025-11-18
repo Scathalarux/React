@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import "./CheckoutPage.css";
 import { OrderSummary } from "./OrderSummary";
 import { PaymentSummary } from "./PaymentSummary";
-import CartIcon from '../../../public/images/icons/cart-favicon.png';
+import CartIcon from "../../../public/images/icons/cart-favicon.png";
 
-export function CheckoutPage({ cartProducts }) {
+export function CheckoutPage({ cartProducts, loadCartProducts }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState(null);
 
@@ -22,30 +22,31 @@ export function CheckoutPage({ cartProducts }) {
       setPaymentSummary(response.data);
     });*/
 
-    const getCheckoutData = async () => {
+    const getDeliveryData = async () => {
       let response = await axios.get(
         "/api/delivery-options?expand=estimatedDeliveyTime"
       );
       setDeliveryOptions(response.data);
-    
-      response = await axios.get("/api/payment-summary");
+    };
+
+    getDeliveryData();
+  }, []);
+
+  useEffect(() => {
+    const getPaymentData = async () => {
+      let response = await axios.get("/api/payment-summary");
       setPaymentSummary(response.data);
     };
 
-    getCheckoutData();
-
-  }, []);
+    getPaymentData();
+  }, [cartProducts]);
 
   return (
     <>
       <title>Checkout</title>
-      <link
-        rel="icon"
-        type="image/svg+xml"
-        href={CartIcon}
-      />
+      <link rel="icon" type="image/svg+xml" href={CartIcon} />
 
-      <CheckoutHeader cartProducts={cartProducts}/>
+      <CheckoutHeader cartProducts={cartProducts} />
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
@@ -54,9 +55,10 @@ export function CheckoutPage({ cartProducts }) {
           <OrderSummary
             deliveryOptions={deliveryOptions}
             cartProducts={cartProducts}
+            loadCartProducts={loadCartProducts}
           />
 
-          <PaymentSummary paymentSummary={paymentSummary} />
+          <PaymentSummary paymentSummary={paymentSummary} loadCartProducts={loadCartProducts} />
         </div>
       </div>
     </>

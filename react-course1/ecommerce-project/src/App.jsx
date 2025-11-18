@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
+window.axios = axios;
+
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
 
@@ -31,11 +33,11 @@ function App() {
       <Route index element={<HomePage cartProducts={cartProducts} loadCartProducts={loadCartProducts}/>} />
       <Route
         path="checkout"
-        element={<CheckoutPage cartProducts={cartProducts} />}
+        element={<CheckoutPage cartProducts={cartProducts} loadCartProducts={loadCartProducts}/>}
       />
       <Route
         path="orders"
-        element={<OrdersPage cartProducts={cartProducts} />}
+        element={<OrdersPage cartProducts={cartProducts} loadCartProducts={loadCartProducts}/>}
       />
       <Route
         path="tracking/:orderId/:productId"

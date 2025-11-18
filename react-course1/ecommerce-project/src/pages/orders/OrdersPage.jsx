@@ -5,7 +5,7 @@ import "./OrdersPage.css";
 import { OrdersGrid } from "./OrdersGrid";
 import OrderIcon from '../../../public/images/icons/orders-favicon.png'
 
-export function OrdersPage({ cartProducts }) {
+export function OrdersPage({ cartProducts, loadCartProducts }) {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export function OrdersPage({ cartProducts }) {
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
 
-        <OrdersGrid orders={orders} />
+        <OrdersGrid orders={orders} loadCartProducts={loadCartProducts}/>
       </div>
     </>
   );
