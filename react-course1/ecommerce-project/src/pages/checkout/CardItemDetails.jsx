@@ -5,7 +5,7 @@ import { useState } from "react";
 export function CardItemDetails({ cartProduct, loadCartProducts }) {
   const [updatedQuantity, setUpdatedQuantity] = useState(false);
   const [newQuantity, setNewQuantity] = useState(`${cartProduct.quantity}`);
-console.log(updatedQuantity);
+
   const deleteProduct = async () => {
     await axios.delete(`/api/cart-items/${cartProduct.productId}`);
     await loadCartProducts();
