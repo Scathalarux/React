@@ -4,16 +4,18 @@ import { useState } from "react";
 
 type ListProps = {
   data: string[];
+  onSelect?: (elemento: string) => void;
 };
 
-export function List({ data }: ListProps) {
+export function List({ data, onSelect }: ListProps) {
   const [index, setIndex] = useState(-1);
 
   /*const handleClick = (event: MouseEvent) => {
     console.log(event);
   };*/
-  const handleClick = (i: number) => {
+  const handleClick = (i: number, elemento: string) => {
     setIndex(i);
+    onSelect?.(elemento);
   };
 
   return (
@@ -24,7 +26,7 @@ export function List({ data }: ListProps) {
             <li
               key={elemento}
               className={`list-group-item ${index === i ? "active" : ""}`}
-              onClick={() => handleClick(i)}
+              onClick={() => handleClick(i, elemento)}
             >
               {elemento}
             </li>
