@@ -1,11 +1,9 @@
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
+import { Main } from "./components/Main.tsx";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Header />
       <Main />
     </>
   );

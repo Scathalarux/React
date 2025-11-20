@@ -1,6 +1,11 @@
-export function RecipeSection() {
+import type { RefObject } from "react";
+
+type RecipeSectionProps ={
+  ref: RefObject<typeof HTMLElement>
+}
+export function RecipeSection({ref}: RecipeSectionProps) {
   return (
-    <section>
+    <section ref={ref}>
       <h2>Chef Claude Recommends:</h2>
       <article className="suggested-recipe-container" aria-live="polite">
         <p>

@@ -1,36 +1,35 @@
-import { useState, type ChangeEvent} from "react";
+import { useState, type ChangeEvent, useEffect } from "react";
 
-type MainProps ={
-  memes: object[]
-}
-export function Main({memes}:MainProps) {
+export function Main() {
+  const [memes, setMemes] = useState([]);
   const [meme, setMeme] = useState({
     imageUrl: "http://i.imgflip.com/1bij.jpg",
     topText: "One does not simply",
     bottomText: "Walk into Mordor",
   });
 
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((response) => response.json())
+      .then((data) => setMemes(data.data.memes));
+  }, []);
+
   const handleTextChange = (event: ChangeEvent) => {
     const { value, name } = event.target;
 
-    /*if (event.target.name === "topText") {
-      setMeme({ ...meme, topText: value });
-    } else if (event.target.name === "bottomText") {
-      setMeme({ ...meme, bottomText: value });
-    }*/
+    /*if (event.target.name === "topText") { setMeme({ ...meme, topText: value }); }
+     else if (event.target.name === "bottomText") { setMeme({ ...meme, bottomText: value }); }*/
 
     setMeme({ ...meme, [name]: value });
   };
 
-  const chooseRandomMeme = ()=>{
-    const randomNumber = Math.trunc(Math.random() *100);
-    const selectedMeme =  memes[randomNumber]
+  const chooseRandomMeme = () => {
+    const randomNumber = Math.floor(Math.random() * memes.length);
+    const selectedMeme = memes[randomNumber];
 
     console.log(selectedMeme);
-    setMeme({...meme, imageUrl:selectedMeme.url})
-  }
-
-  
+    setMeme({ ...meme, imageUrl: selectedMeme.url });
+  };
 
   return (
     <main>
