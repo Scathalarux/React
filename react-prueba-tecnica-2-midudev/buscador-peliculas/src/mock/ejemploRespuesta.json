@@ -1,0 +1,76 @@
+{
+  "Search": [
+    {
+      "Title": "Coco",
+      "Year": "2017",
+      "imdbID": "tt2380307",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDIyM2E2NTAtMzlhNy00ZGUxLWI1NjgtZDY5MzhiMDc5NGU3XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Coco Before Chanel",
+      "Year": "2009",
+      "imdbID": "tt1035736",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTA0NjYzMzQxNzBeQTJeQWpwZ15BbWU3MDI2MDA0ODI@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Coco Chanel & Igor Stravinsky",
+      "Year": "2009",
+      "imdbID": "tt1023441",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTMxMDg1OTgyM15BMl5BanBnXkFtZTcwNTgyNzUzMw@@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Coco Chanel",
+      "Year": "2008",
+      "imdbID": "tt1094661",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYWYxM2U1OTgtNzU4OS00NjUyLTg5ZTAtMzIxNzM5N2IxYTE4XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Coco",
+      "Year": "2009",
+      "imdbID": "tt1262877",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ0NTg0NTQ5N15BMl5BanBnXkFtZTcwNjMyOTI0Mg@@._V1_SX300.jpg"
+    },
+    {
+      "Title": "100% Coco",
+      "Year": "2017",
+      "imdbID": "tt5803528",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTA4N2Q1OWItOGE2My00Mzg4LThkMjAtNTBmMDNjNGIxOTA4XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Ice Loves Coco",
+      "Year": "2011–2013",
+      "imdbID": "tt1910969",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNzZkYjc3NGItOTBlYS00MmU3LWJhNGMtMzIzZDA1ZTA4NDgyXkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Casa Coco",
+      "Year": "2022",
+      "imdbID": "tt12821748",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDJkMWI2ZmItNWIzOC00MThlLWJkZTAtYmY4ZjIwNjMwOTdmXkEyXkFqcGdeQXVyNTI3MTkwMTg@._V1_SX300.jpg"
+    },
+    {
+      "Title": "A Celebration of the Music from Coco",
+      "Year": "2020",
+      "imdbID": "tt12076020",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYzE3ZDc1ZjEtYTU2NS00NDI0LTkzZWQtZjI3NDhiZDY0MjcxXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Making Coco: The Grant Fuhr Story",
+      "Year": "2018",
+      "imdbID": "tt7611944",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjM0MTA4OTMzNV5BMl5BanBnXkFtZTgwMTg1NzYyNjM@._V1_SX300.jpg"
+    }
+  ],
+  "totalResults": "153",
+  "Response": "True"
+}
